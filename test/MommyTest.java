@@ -28,4 +28,9 @@ public class MommyTest {
     public void should_return_hmommys_when_given_has() {
         assertEquals("hmommys",actualWord.toMommy("has"));
     }
+
+    @Test
+    public void should_return_hard_when_given_hard_with_25_percent_vowels() {
+        assertEquals("hard",actualWord.toMommy("hard"));
+    }
 }
