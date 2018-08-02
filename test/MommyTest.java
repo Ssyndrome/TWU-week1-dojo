@@ -3,6 +3,8 @@ import org.junit.Test;
 import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 public class MommyTest {
 
@@ -32,6 +34,21 @@ public class MommyTest {
     @Test
     public void should_return_hard_when_given_hard_with_25_percent_vowels() {
         assertEquals("hard",actualWord.toMommy("hard"));
+    }
+
+    @Test
+    public void should_be_simplified_to_no_continual_vowels() {
+        assertEquals("har",actualWord.simplify("hear"));
+    }
+
+    @Test
+    public void should_be_original_when_given_no_continual_vowels() {
+        assertEquals("hard",actualWord.simplify("hard"));
+    }
+
+    @Test
+    public void should_be_greater_than_30_percentage_when_given_hear() {
+        assertTrue(actualWord.percentage("hear") > 0.3);
     }
 
     @Test
