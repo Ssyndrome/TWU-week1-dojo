@@ -33,4 +33,9 @@ public class MommyTest {
     public void should_return_hard_when_given_hard_with_25_percent_vowels() {
         assertEquals("hard",actualWord.toMommy("hard"));
     }
+
+    @Test
+    public void should_return_hmommyr_when_given_hear_with_continual_vowels() {
+        assertEquals("hmommyr",actualWord.toMommy("hear"));
+    }
 }
