@@ -26,6 +26,6 @@ public class MommyTest {
 
     @Test
     public void should_return_hmommys_when_given_has() {
-        assertEquals("hmommy",actualWord.toMommy("has"));
+        assertEquals("hmommys",actualWord.toMommy("has"));
     }
 }
