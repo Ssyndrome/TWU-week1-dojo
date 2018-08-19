@@ -47,12 +47,12 @@ public class MommyTest {
     }
 
     @Test
-    public void should_be_greater_than_30_percentage_when_given_hear() {
-        assertTrue(actualWord.percentage("hear") > 0.3);
+    public void should_return_hmommyr_when_given_hear_with_continual_vowels() {
+        assertEquals("hmommyr",actualWord.toMommy("hear"));
     }
 
     @Test
-    public void should_return_hmommyr_when_given_hear_with_continual_vowels() {
-        assertEquals("hmommyr",actualWord.toMommy("hear"));
+    public void should_return_hmommyhmommy_when_given_hehea() {
+        assertEquals("hmommyhmommy",actualWord.toMommy("hehea"));
     }
 }
